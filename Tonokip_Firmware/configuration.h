@@ -16,8 +16,12 @@ const bool USE_THERMISTOR = true; //Set to false if using thermocouple
 //Calibration variables
 float x_steps_per_unit = 80.376;
 float y_steps_per_unit = 80.376;
-float z_steps_per_unit = 6667.184;
-float e_steps_per_unit = 16;
+
+//float z_steps_per_unit = 6667.184;
+// Mendel Prusa:
+float z_steps_per_unit = 2560.0;
+
+float e_steps_per_unit = 20.0;
 float max_feedrate = 18000;
 
 //float x_steps_per_unit = 10.047;
@@ -44,11 +48,11 @@ const bool INVERT_Z_DIR = true;
 const bool INVERT_E_DIR = false;
 
 //Endstop Settings
-const bool ENDSTOPS_INVERTING = true;
+const bool ENDSTOPS_INVERTING = false;
 const bool min_software_endstops = false; //If true, axis won't move to coordinates less than zero.
 const bool max_software_endstops = true;  //If true, axis won't move to coordinates greater than the defined lengths below.
-const int X_MAX_LENGTH = 200;
-const int Y_MAX_LENGTH = 200;
+const int X_MAX_LENGTH = 170;
+const int Y_MAX_LENGTH = 180;
 const int Z_MAX_LENGTH = 70;
 
 #define BAUDRATE 115200
